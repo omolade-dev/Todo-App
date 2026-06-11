@@ -4,6 +4,22 @@ body {
   box-sizing: border-box;
 }
 
+.container {
+  align-items: center;
+  margin: 20%;
+  justify-content: center;
+}
+
 .btn {
   padding: 20px;
+  background: gray;
+  width: 330px;
+}
+
+button {
+  padding: 20px;
+  width: 100px;
+  border-radius: 20px;
+  font-size: 15px;
+  text-align: center;
 }

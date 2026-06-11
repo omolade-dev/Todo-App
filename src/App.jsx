@@ -1,13 +1,13 @@
-import { useState } from "react";
-import taskList from "./components/TaskList";
+// import { useState } from "react";
+// import tasks from "./components/TaskList";
 
 function App() {
-  const [task, setTask] = useState([]);
-  const [input, setInput] = useState("");
-  const [filtered, setFilter] = useState("all");
+  // const [task, setTask] = useState([]);
+  // const [input, setInput] = useState("");
+  // const [filtered, setFilter] = useState("all");
 
   return (
-    <div>
+    <div className="container">
       <div className="logo">
         <div className="img">
           <img src="" alt="" />
