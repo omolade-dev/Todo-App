@@ -1,4 +1,10 @@
+import { useState } from "react";
+
 function App() {
+  const [task, setTask] = useState([]);
+  const [input, setInput] = useState("");
+  const [filtered, setFilter] = useState("all");
+
   return (
     <div>
       <div className="logo">
