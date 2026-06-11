@@ -1,4 +1,4 @@
-const taskS = [
+const taskList = [
   {
     id: 1,
     text: "Learn React State Management",
@@ -16,4 +16,4 @@ const taskS = [
   },
 ];
 
-export default tasklist;
+export default taskList;

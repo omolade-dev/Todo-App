@@ -1,5 +1,8 @@
 // import { useState } from "react";
 // import tasks from "./components/TaskList";
+import FilterButton from "./components/FilteredButtons";
+import TaskInput from "./components/TaskInput";
+import TaskList from "./components/TaskList";
 
 function App() {
   // const [task, setTask] = useState([]);
@@ -15,20 +18,16 @@ function App() {
         <div className="header">
           <h1>My Tasks</h1>
 
-          <p> 1 of 3 completed</p>
+          <p>
+            {" "}
+            {completedTasks} of {tasks.length} completed
+          </p>
         </div>
       </div>
 
-      <div className="form">
-        <input type="text" placeholder="Add a new task..." />
-        <button> + Add</button>
-      </div>
-
-      <div className="btn">
-        <button>All</button>
-        <button>Pending</button>
-        <button>Completed</button>
-      </div>
+      <TaskInput />
+      <FilterButton />
+      <TaskList />
 
       <div>
         <p></p>
