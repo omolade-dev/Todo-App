@@ -19,7 +19,7 @@ function App() {
         </div>
       </div>
 
-      <div>
+      <div className="form">
         <input type="text" placeholder="Add a new task..." />
         <button> + Add</button>
       </div>

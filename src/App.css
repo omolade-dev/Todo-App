@@ -10,16 +10,72 @@ body {
   justify-content: center;
 }
 
-.btn {
+/* Form: input + add button */
+.form {
   padding: 20px;
-  background: gray;
-  width: 330px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  max-width: 700px;
 }
 
-button {
+.form input {
+  flex: 1;
+  padding: 12px 14px;
+  font-size: 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+}
+
+.form input:focus {
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.12);
+  border-color: #3b82f6;
+}
+
+.form input::placeholder {
+  color: #9ca3af;
+  opacity: 1;
+  font-style: italic;
+}
+
+/* Add button next to input */
+.form > button {
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  min-width: 96px;
+}
+
+/* Filter buttons container */
+.btn {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  max-width: 700px;
+  margin: 0 auto;
   padding: 20px;
-  width: 100px;
-  border-radius: 20px;
+}
+
+/* Make All / Pending / Completed buttons uniform */
+.btn button {
+  flex: 1;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  cursor: pointer;
   font-size: 15px;
   text-align: center;
+}
+
+/* Optional: hover states */
+.form > button:hover,
+.btn button:hover {
+  filter: brightness(0.95);
 }
