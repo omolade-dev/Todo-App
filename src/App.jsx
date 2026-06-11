@@ -15,9 +15,7 @@ function App() {
         <div className="header">
           <h1>My Tasks</h1>
 
-          <p>
-            {completedTask.length} of {taskList.length} completed
-          </p>
+          <p> 1 of 3 completed</p>
         </div>
       </div>
 
