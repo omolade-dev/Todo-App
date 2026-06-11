@@ -8,7 +8,9 @@ function App() {
         <div className="header">
           <h1>My Tasks</h1>
 
-          <p>1 of 3 completed</p>
+          {/* <p>
+            {filteredList.length} of {totalList.length} completed
+          </p> */}
         </div>
       </div>
 
@@ -17,10 +19,10 @@ function App() {
         <button> + Add</button>
       </div>
 
-      <div>
-        <h3>All</h3>
-        <h3>Pending</h3>
-        <h3>Completed</h3>
+      <div className="btn">
+        <button>All</button>
+        <button>Pending</button>
+        <button>Completed</button>
       </div>
 
       <div>
