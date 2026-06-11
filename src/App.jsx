@@ -1,4 +1,5 @@
 import { useState } from "react";
+import taskList from "./components/TaskList";
 
 function App() {
   const [task, setTask] = useState([]);
@@ -14,9 +15,9 @@ function App() {
         <div className="header">
           <h1>My Tasks</h1>
 
-          {/* <p>
-            {filteredList.length} of {totalList.length} completed
-          </p> */}
+          <p>
+            {completedTask.length} of {taskList.length} completed
+          </p>
         </div>
       </div>
 
