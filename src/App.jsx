@@ -1,13 +1,31 @@
-// import { useState } from "react";
-// import tasks from "./components/TaskList";
+import { useState } from "react";
+
 import Header from "./components/Header";
-import FilterButton from "./components/FilteredButtons";
+import FilterButtons from "./components/FilteredButtons";
 import TaskInput from "./components/TaskInput";
 import TaskList from "./components/TaskList";
 
 function App() {
-  const [task, setNewTask] = useState("");
-  const [filtered, setFilter] = useState("all");
+  const [tasks, setTasks] = useState([
+    {
+      id: 1,
+      text: "Learn React State Management",
+      completed: true,
+    },
+    {
+      id: 2,
+      text: "Practice MTH 306",
+      completed: false,
+    },
+    {
+      id: 3,
+      text: "Build a Todo App",
+      completed: false,
+    },
+  ]);
+
+  const [newTask, setNewTask] = useState("");
+  const [filter, setFilter] = useState("all");
 
   const addTask = () => {
     if (!setNewTask.trim()) return;
@@ -22,15 +40,27 @@ function App() {
     setNewTask("");
   };
 
-  const toggleTask = (id) => {};
+  const toggleTask = (id) => {
+    setTasks(
+      tasks.map((task) =>
+        task.id === id ? { ...task, completed: !task.completed } : task,
+      ),
+    );
+  };
 
-  const deleteTask = (id) => {};
+  const deleteTask = (id) => {
+    setTasks(tasks.filter((task) => task.id !== id));
+  };
 
-  const filteredTask = (id) => {};
+  const filteredTasks = tasks.filter((task) => {
+    if (filter === "pending") return !task.completed;
+    if (filter === "completed") return task.completed;
+    return true;
+  });
 
-  const pendingCount = (id) => {};
+  const pendingCount = tasks.filter((task) => task.pendingCount.length);
 
-  const completedCount = (id) => {};
+  const completedCount = tasks.filter((task) => task.completed).length;
 
   return (
     <div className="container">

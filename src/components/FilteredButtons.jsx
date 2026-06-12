@@ -1,4 +1,4 @@
-function filteredButtons({ filter, setFilter, pendingCount }) {
+function filteredButtons({ setFilter, pendingCount }) {
   return (
     <div>
       <div className="btn">
