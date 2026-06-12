@@ -4,7 +4,7 @@ function filteredButtons({ setFilter, pendingCount }) {
       <div className="btn">
         <button onClick={() => setFilter("all")}>All</button>
         <button onClick={() => setFilter("pending")}>
-          Pending ({pendingCount})
+          Pending {pendingCount}
         </button>
         <button onClick={() => setFilter("completed")}>Completed</button>
       </div>

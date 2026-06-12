@@ -11,7 +11,7 @@ function TaskList({ tasks, toggleTask, deleteTask }) {
 
           <span>{task.text}</span>
           <span>{task.completed ? "done" : "pending"}</span>
-          <button onClick={() => deleteTask(TaskList.id)}> Delete</button>
+          <button onClick={() => deleteTask(task.id)}> Delete</button>
         </div>
       ))}
     </div>

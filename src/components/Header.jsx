@@ -4,7 +4,6 @@ function Header({ completedCount, totalTasks }) {
       <h1>My Tasks</h1>
 
       <p>
-        {" "}
         {completedCount} of {totalTasks} completed
       </p>
     </div>

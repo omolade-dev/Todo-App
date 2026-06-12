@@ -58,7 +58,7 @@ function App() {
     return true;
   });
 
-  const pendingCount = tasks.filter((task) => task.pendingCount.length);
+  const pendingCount = tasks.filter((task) => !task.completed).length;
 
   const completedCount = tasks.filter((task) => task.completed).length;
 
@@ -71,7 +71,8 @@ function App() {
         <Header />
       </div>
 
-      <TaskInput />
+      <TaskInput addTask={addTask} />
+
       <FilterButtons
         filter={filter}
         setFilter={setFilter}
