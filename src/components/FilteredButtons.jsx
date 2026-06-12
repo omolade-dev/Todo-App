@@ -1,10 +1,12 @@
-function filteredButtons() {
+function filteredButtons({ filter, setFilter, pendingCount }) {
   return (
     <div>
       <div className="btn">
-        <button>All</button>
-        <button>Pending</button>
-        <button>Completed</button>
+        <button onClick={() => setFilter("all")}>All</button>
+        <button onClick={() => setFilter("pending")}>
+          Pending ({pendingCount})
+        </button>
+        <button onClick={() => setFilter("completed")}>Completed</button>
       </div>
     </div>
   );
