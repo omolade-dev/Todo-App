@@ -10,4 +10,4 @@ function filteredButtons() {
   );
 }
 
-export default tasklist;
+export default filteredButtons;
